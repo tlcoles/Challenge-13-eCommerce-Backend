@@ -1,7 +1,7 @@
 {
   "name": "module-13-challenge-orm",
   "version": "1.0.0",
-  "description": "",
+  "description": "The student assignment of the ESMT Coding Boot Camp is to build the backend for an e-commerce site, using Express.js, Sequelize, and a MySQL database.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
