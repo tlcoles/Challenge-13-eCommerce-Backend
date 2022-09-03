@@ -45,8 +45,23 @@ router.post('/', async (req, res) => {
   }
 });
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
   // update a category by its `id` value
+  try {
+    const changedCategory = await Category.update(req.body, {
+      where: {
+        id: req.params.id,
+      },
+    });
+    //! I am uncertain about the [0] in the line below
+    if (!changedCategory[0]) {
+      res.status(404).json({ message: 'Sorry, no category with this ID!' });
+      return;
+    }
+    res.status(200).json(changedCategory);    
+  } catch (error) {
+    res.status(500).json(error);
+  }
 });
 
 router.delete('/:id', (req, res) => {
