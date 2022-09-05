@@ -55,7 +55,7 @@ router.put('/:id', async (req, res) => {
     });
     //! I am uncertain about the [0] in the line below
     if (!changedCategory[0]) {
-      res.status(404).json({ message: 'Sorry, no category with this ID!' });
+      res.status(404).json({ message: 'Sorry, no category with this ID!'});
       return;
     }
     res.status(200).json(changedCategory);    
