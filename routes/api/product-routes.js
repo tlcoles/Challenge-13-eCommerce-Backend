@@ -24,10 +24,7 @@ router.get('/:id', async (req, res) => {
   // be sure to include its associated Category and Tag data
   try {
     const productById = await Product.findByPk(req.params.id, {
-      include: [
-        { model: Category },
-        { model: ProductTag },
-      ],
+      include: [{ all: true },],
     });
     if (!productById) {
       res.status(404).json({ message: 'Sorry, there is no product with this ID. Please try again.' });
@@ -39,18 +36,17 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+//! Lines below were provided in starter code
 // create new product
 router.post('/', async (req, res) => {
-  /* req.body should look like this...
+/* req.body should look like this...
     {
-      product_name: "Basketball",
-      price: 200.00,
-      stock: 3,
-      tagIds: [1, 2, 3, 4]
+      "product_name": "Docker sneakers",
+      "price": "60.00",
+      "stock": "12",
+      "tagIds": [6,7]
     }
   */
-
-//! Lines below were provided in starter code
   Product.create(req.body)
     .then((product) => {
       // if there's product tags, we need to create pairings to bulk create in the ProductTag model
