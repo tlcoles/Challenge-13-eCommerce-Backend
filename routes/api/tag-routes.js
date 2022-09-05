@@ -27,7 +27,7 @@ router.get('/:id', async (req, res) => {
       ],
     });
     if (!tagById) {
-      res.status(404).json({ message: 'Sorry, there is no tag with this ID. Please try again.' });
+      res.status(404).json({ message: 'Sorry, this did not work. Please try another tag name.' });
       return;
     }
     res.status(200).json(tagById);
