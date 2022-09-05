@@ -50,19 +50,19 @@ router.post('/', async (req, res) => {
       tagIds: [1, 2, 3, 4]
     }
   */
- try {
-  const newProduct = await Product.create({
-    product_name: req.body.product_name,
-    price: req.body.price,
-    stock: req.body.stock,
-    //! How to use multiple tag Ids is unclear
-              tag_id: req.body.tag_id,
-            });
-            res.status(200).json(newProduct);
-          } catch (error) {
-            res.status(400).json(error);
-          }
-    //! Lines below were provided in starter code
+//  try {
+//   const newProduct = await Product.create({
+//     product_name: req.body.product_name,
+//     price: req.body.price,
+//     stock: req.body.stock,
+//     //! How to use multiple tag Ids is unclear
+//               tag_id: req.body.tag_id,
+//             });
+//             res.status(200).json(newProduct);
+//           } catch (error) {
+//             res.status(400).json(error);
+//           }
+//     //! Lines below were provided in starter code
             Product.create(req.body)
               .then((product) => {
                 // if there's product tags, we need to create pairings to bulk create in the ProductTag model
