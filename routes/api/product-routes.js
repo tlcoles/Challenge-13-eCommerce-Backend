@@ -44,6 +44,7 @@ router.post('/', async (req, res) => {
       "product_name": "Docker sneakers",
       "price": "60.00",
       "stock": "12",
+      "category_id": "5",
       "tagIds": [6,7]
     }
   */
