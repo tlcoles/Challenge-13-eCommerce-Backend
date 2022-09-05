@@ -2,10 +2,13 @@
 The student assignment of the ESMT Coding Boot Camp is to build the backend for an e-commerce site, using Express.js, Sequelize, and a MySQL database. The assignment was completed with a test of CRUD operations using Insomnia and a video submission showing the results. 
 
 ## Snapshot
-The following images show the Insomnia tests of GET route for products and PUT route for categories.
+The following images and videos show the Insomnia tests of GET route for products and PUT route for categories.
 
 ![GET products](./assets/images/get-products.png)
 ![POST categories](./assets/images/post-categories.png)
+
+[![Video #1 on Loom](https://cdn.loom.com/sessions/thumbnails/7927bf4ba3d2483fa3ce6014ba3beded-with-play.gif)](https://www.loom.com/share/7927bf4ba3d2483fa3ce6014ba3beded "Video #1 on Loom")
+[![Video #2 on Loom](https://cdn.loom.com/sessions/thumbnails/bb77a2aa51384dc48cf01a08a1ed08f0-with-play.gif)](https://www.loom.com/share/bb77a2aa51384dc48cf01a08a1ed08f0 "Video #2 on Loom")
 
 ## Challenges
 * Use starter code for a functional Express.js API  
